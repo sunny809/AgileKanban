@@ -1,14 +1,23 @@
 <div class="main-body">
   <div>
-    <app-kanban-body-item></app-kanban-body-item>
+    <ul>
+      <li *ngFor="let us of backLogList">
+        <app-kanban-body-item [userStory]="us"></app-kanban-body-item>
+      </li>
+    </ul>
   </div>
   <div>
-    <app-kanban-body-item></app-kanban-body-item>
-    <app-kanban-body-item></app-kanban-body-item>
-    <app-kanban-body-item></app-kanban-body-item>
+    <ul>
+      <li *ngFor="let us of backLogList">
+        <app-kanban-body-item [userStory]="us"></app-kanban-body-item>
+      </li>
+    </ul>
   </div>
   <div>
-    <app-kanban-body-item></app-kanban-body-item>
-    <app-kanban-body-item></app-kanban-body-item>
+    <ul>
+      <li *ngFor="let us of backLogList">
+        <app-kanban-body-item [userStory]="us"></app-kanban-body-item>
+      </li>
+    </ul>
   </div>
 </div>

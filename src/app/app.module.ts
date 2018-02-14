@@ -8,6 +8,10 @@ import { KanbanHeaderComponent } from './kanban-header/kanban-header.component';
 import { KanbanBodyComponent } from './kanban-body/kanban-body.component';
 import { KanbanBodyItemComponent } from './kanban-body-item/kanban-body-item.component';
 import { UserStoryComponent } from './user-story/user-story.component';
+import { KanbanContentComponent } from './kanban-content/kanban-content.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
+import { PageBodyComponent } from './page-body/page-body.component';
+import { PageTailerComponent } from './page-tailer/page-tailer.component';
 
 
 @NgModule({
@@ -17,7 +21,11 @@ import { UserStoryComponent } from './user-story/user-story.component';
     KanbanHeaderComponent,
     KanbanBodyComponent,
     KanbanBodyItemComponent,
-    UserStoryComponent
+    UserStoryComponent,
+    KanbanContentComponent,
+    PageHeaderComponent,
+    PageBodyComponent,
+    PageTailerComponent
   ],
   imports: [
     BrowserModule
