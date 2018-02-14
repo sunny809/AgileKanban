@@ -4,4 +4,6 @@ export class UserStory {
   description: string;
   storyPoint: number;
   progress: number;
+  priority: number;
+  importance: number;
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {UserStory} from '../UserStory';
 
 @Component({
   selector: 'app-kanban-body-item',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KanbanBodyItemComponent implements OnInit {
 
-  constructor() { }
-
+  @Input() userStory: UserStory;
+  constructor() {
+    console.log(this.userStory);
+  }
   ngOnInit() {
+    console.log(this.userStory);
   }
 
 }

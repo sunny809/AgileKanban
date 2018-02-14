@@ -14,24 +14,38 @@ export class KanbanBodyComponent implements OnInit {
   doneList = [];
 
   constructor() {
-    this.userStory.forEach(function (value, key) {
+    console.log('constructor');
+  }
+
+  ngOnInit() {
+    console.log('ngOnInit');
+
+    const bList = [];
+    const pList = [];
+    const dList = [];
+
+    this.userStory.forEach(function (this, value, key, array) {
+
       switch (value.progress) {
         case 1:
-          this.backLogList.push(value);
+          bList.push(value);
           break;
         case 2:
-          this.inProgressList.push(value);
+          pList.push(value);
           break;
         case 3:
-          this.doneList.push(value);
+          dList.push(value);
           break;
         default:
           break;
       }
     });
+
+    this.backLogList = bList;
+    this.inProgressList = pList;
+    this.doneList = dList;
   }
 
-  ngOnInit() {
-  }
+
 
 }
