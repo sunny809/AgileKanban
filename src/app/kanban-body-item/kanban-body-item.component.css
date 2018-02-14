@@ -1,0 +1,33 @@
+.kbItem {
+  background-color: #b3d4fc;
+  margin: 10px;
+  border: 10px;
+  width: 30%;
+  float: left;
+}
+.kbUserStory {
+  background-color: white;
+  margin: 3px;
+  padding: 5px;
+}
+.kbDescription {
+  background-color: white;
+  margin: 3px;
+  padding: 5px;
+}
+
+.kbPriority {
+  background-color: white;
+  margin: 3px;
+  padding: 5px;
+}
+.kbImportance {
+  background-color: white;
+  margin: 3px;
+  padding: 5px;
+}
+.kbStoryPoint {
+  background-color: white;
+  margin: 3px;
+  padding: 5px;
+}
