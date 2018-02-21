@@ -1,7 +1,14 @@
-body,td,th {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #1d1007; line-height:24px}
-
-.kbBody{
-  background-color: #040B27;
+.header-bar {
+  /*background-color: #020B48;*/
+  background-color: white;
   margin: 0px;
   padding: 10px;
 }
+
+/*.body,td,th {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #1d1007; line-height:24px}*/
+
+/*.kbBody{*/
+/*background-color: #040B27;*/
+/*margin: 0px;*/
+/*padding: 10px;*/
+/*}*/

@@ -4,11 +4,13 @@
   border: 10px;
   width: 30%;
   float: left;
+  border-radius: 5px
 }
 .kbUserStory {
   background-color: white;
   margin: 3px;
   padding: 5px;
+  border-radius: 5px
 }
 .kbDescription {
   background-color: white;

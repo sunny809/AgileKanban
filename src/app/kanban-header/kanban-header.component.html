@@ -1,5 +1,12 @@
 <div class="main-header">
-  <div class="header-column"><b>Backlog</b><div>Quantity : 1</div></div>
-  <div class="header-column"><b>In Progress</b><div>Quantity : 3</div></div>
-  <div class="header-column"><b>Done</b><div>Quantity : 2</div></div>
+  <div class="header-column"><b>Backlog</b>
+    <div>Quantity : {{backLogQty}}</div>
+  </div>
+  <div class="header-column"><b>In Progress</b>
+    <div>Quantity : {{progressQty}}</div>
+  </div>
+  <div class="header-column"><b>Done</b>
+    <div>Quantity : {{doneQty}}</div>
+  </div>
+  <div class="header-addnew" onclick="addNewUserStory() ">Add User Story</div>
 </div>

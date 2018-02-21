@@ -4,8 +4,20 @@
 <!--TODO click and could be edit UserStorys detail-->
   <!--TODO : could be drat and drop to different status-->
   <div class="kbUserStory"><b>{{userStory.name}}</b></div>
-  <div class="kbDescription"><b>Description:</b>{{userStory.description}}</div>
-  <div class="kbStoryPoint"><b>Story Point:</b>{{userStory.storyPoint}}</div>
-  <div class="kbPriority"><b>Priority:</b>{{userStory.progress}}</div>
-  <div class="kbImportance"><b>Importance:</b>{{userStory.progress}}</div>
+  <div class="kbUserStory"><b>Description:</b>
+    <label>
+      <input [(ngModel)]="userStory.description" placeholder="description">
+    </label>
+    <!--<input [(ngModel)]="userStory" placeholder="name">-->
+    <!--{{userStory.description}}-->
+  </div>
+  <div class="kbUserStory"><b>Story Point:</b>
+    <input [(ngModel)]="userStory.storyPoint" placeholder="description">
+  </div>
+  <div class="kbUserStory"><b>Priority:</b>
+    <input [(ngModel)]="userStory.priority" placeholder="description">
+  </div>
+  <div class="kbUserStory"><b>Importance:</b>
+    <input [(ngModel)]="userStory.importance" placeholder="description">
+  </div>
 </div>
