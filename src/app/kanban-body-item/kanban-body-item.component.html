@@ -20,4 +20,10 @@
   <div class="kbUserStory"><b>Importance:</b>
     <input [(ngModel)]="userStory.importance" placeholder="description">
   </div>
+  <div class="btn-box">
+    <!--<div class="second-btn">Delete</div>-->
+    <div class="primary-btn" (click)="showDetail(userStory.id)">Detail</div>
+    <div class="second-btn" (click)="delDetail(userStory.id)">Del</div>
+  </div>
+
 </div>

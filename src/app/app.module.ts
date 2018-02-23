@@ -9,6 +9,7 @@ import {KanbanBodyComponent} from './kanban-body/kanban-body.component';
 import {KanbanBodyItemComponent} from './kanban-body-item/kanban-body-item.component';
 import {UserStoryComponent} from './user-story/user-story.component';
 import {FormsModule} from '@angular/forms';
+import {KanbanService} from './kanban.service';
 // import { KanbanContentComponent } from './kanban-content/kanban-content.component';
 // import { PageHeaderComponent } from './page-header/page-header.component';
 // import { PageBodyComponent } from './page-body/page-body.component';
@@ -32,7 +33,9 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    KanbanService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

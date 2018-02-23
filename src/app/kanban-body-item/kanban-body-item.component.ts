@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {UserStory} from '../UserStory';
+import {KanbanService} from '../kanban.service';
 
 @Component({
   selector: 'app-kanban-body-item',
@@ -9,11 +10,21 @@ import {UserStory} from '../UserStory';
 export class KanbanBodyItemComponent implements OnInit {
 
   @Input() userStory: UserStory;
-  constructor() {
+  constructor(private kanbanService: KanbanService) {
     console.log(this.userStory);
   }
   ngOnInit() {
     console.log(this.userStory);
+  }
+
+  showDetail(userStoryIndex: number) {
+    console.log('showing detail', userStoryIndex);
+  }
+
+  delDetail(userStoryIndex: number) {
+    console.log('del detail', userStoryIndex);
+    this.kanbanService.deleteUserStory(userStoryIndex);
+    // console.log();
   }
 
 }

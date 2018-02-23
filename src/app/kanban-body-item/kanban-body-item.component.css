@@ -1,4 +1,7 @@
 .kbItem {
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
   background-color: #b3d4fc;
   margin: 10px;
   border: 10px;
@@ -32,4 +35,34 @@
   background-color: white;
   margin: 3px;
   padding: 5px;
+}
+.primary-btn {
+  width: 70px;
+  margin: 10px;
+  padding:10px;
+  border-radius:12px;
+  border-width: 3px;
+  border-color: white;
+  border-style: solid;
+  color: white;
+  background-color: darkred;
+  text-align: center;
+}
+
+.second-btn {
+  width: 70px;
+  margin: 10px;
+  padding:10px;
+  border-radius:12px;
+  border-width: 3px;
+  border-color: white;
+  border-style: solid;
+  color: white;
+  background-color: darkgreen;
+  text-align: center;
+}
+
+.btn-box {
+  width: 100%;
+  float: right;
 }

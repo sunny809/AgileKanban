@@ -9,9 +9,9 @@ export class KanbanHeaderComponent implements OnInit {
 
   constructor() { }
 
-  backLogQty = 2;
-  progressQty = 3;
-  doneQty = 4;
+  backLogQty = 0;
+  progressQty = 0;
+  doneQty = 0;
 
   ngOnInit() {
   }
