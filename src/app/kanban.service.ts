@@ -7,16 +7,17 @@ import {UserStory} from './UserStory';
 @Injectable()
 export class KanbanService {
 
-  userStory = [];
-  backLogCount = 0;
-  inProgressCount = 0;
-  doneCount = 0;
+  public userStory: UserStory[] = [];
+  backLogCount: number;
+  inProgressCount: number;
+  doneCount: number;
 
   constructor() {
     this.userStory = USER_STORYS;
     this.backLogCount = 0;
     this.inProgressCount = 0;
     this.doneCount = 0;
+    console.log('constructor done');
   }
 
   getUserStory(): UserStory[] {
@@ -42,26 +43,53 @@ export class KanbanService {
 
   refreshStat() {
     console.log('into the refresh state');
-    this.userStory.forEach(function (currentItem, index, userStory) {
+    console.log('inside' + this.backLogCount);
+
+    for (let i = 0; i < this.userStory.length; i++ ) {
+      const currentItem = this.userStory[i];
       const progress = currentItem.progress;
-      console.log('progress flag:' + progress);
+      // console.log('progress flag:' + progress);
+      // console.log('backLogCount' + this.backLogCount);
       switch (progress) {
-        case 1: this.backLogCount += 1;
-          alert('1');
+        case 1:
+          this.backLogCount--;
+          // alert('1');
           break;
-        case 2: this.inProgressCount += 1;
+        case 2:
+          this.inProgressCount--;
           // console.log('case 2');
-          alert('2');
+          // alert('2');
           break;
-        case 3: this.doneCount += 1;
-          alert('3');
+        case 3:
+          this.doneCount--;
+          // alert('3');
           break;
         default: alert('default');
           // console.log('case default');
           break;
       }
-      // console.log('backlog:' + this.backLogCount + '\nprogress:' + this.inProgressCount + '\ndone:' + this.doneCount);
-    });
+    }
+    // this.userStory.forEach(function (currentItem, index, userStory) {
+    //   const progress = currentItem.progress;
+    //   console.log('progress flag:' + progress);
+    //   console.log('backLogCount' + this.backLogCount);
+    //   switch (progress) {
+    //     case 1: this.backLogCount++;
+    //       alert('1');
+    //       break;
+    //     case 2: this.inProgressCount++;
+    //       // console.log('case 2');
+    //       alert('2');
+    //       break;
+    //     case 3: this.doneCount++;
+    //       alert('3');
+    //       break;
+    //     default: alert('default');
+    //       // console.log('case default');
+    //       break;
+    //   }
+    console.log('backlog:' + this.backLogCount + '\nprogress:' + this.inProgressCount + '\ndone:' + this.doneCount);
+    // });
   }
 
   getBackLogList(): UserStory[] {

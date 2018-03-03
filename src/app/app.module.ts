@@ -10,6 +10,8 @@ import {KanbanBodyItemComponent} from './kanban-body-item/kanban-body-item.compo
 import {UserStoryComponent} from './user-story/user-story.component';
 import {FormsModule} from '@angular/forms';
 import {KanbanService} from './kanban.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { UserStoryEditorComponent } from './user-story-editor/user-story-editor.component';
 // import { KanbanContentComponent } from './kanban-content/kanban-content.component';
 // import { PageHeaderComponent } from './page-header/page-header.component';
 // import { PageBodyComponent } from './page-body/page-body.component';
@@ -23,7 +25,8 @@ import {KanbanService} from './kanban.service';
     KanbanHeaderComponent,
     KanbanBodyComponent,
     KanbanBodyItemComponent,
-    UserStoryComponent
+    UserStoryComponent,
+    UserStoryEditorComponent
     // KanbanContentComponent,
     // PageHeaderComponent,
     // PageBodyComponent,
@@ -31,7 +34,8 @@ import {KanbanService} from './kanban.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     KanbanService

@@ -17,7 +17,7 @@ body {
   /*font-family: "Microsoft YaHei";*/
   font-size: 14px;
   color: #333;
-  background-color: #020B48;
+  background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -97,3 +97,8 @@ textarea {
   *display: inline;
   *zoom: 1;
 }
+
+.a:link {color: #1f3a87; text-decoration:none;}
+.a:visited {color: #83006f;text-decoration:none;}
+.a:hover {color: #bc2931; text-decoration:underline;}
+.a:active {color: #bc2931;}

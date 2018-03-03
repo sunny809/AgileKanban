@@ -1,5 +1,13 @@
+/* the common css*/
+body { text-align: center; font-family:arial;margin:0; padding:0; background: #FFF;  color:#000;}
+div,form,img,ul,ol,li,dl,dt,dd {margin: 0; padding: 0; border: 0; }
+li{list-style-type:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6 { margin:0; padding:0; font-weight:normal;}
+
+
 .header-bar {
-  /*background-color: #020B48;*/
+  /* background-color: #020B48; */
   background-color: white;
   margin: 0px;
   padding: 10px;
@@ -30,3 +38,23 @@
 /*margin: 0px;*/
 /*padding: 10px;*/
 /*}*/
+.nav {
+  border: 1px;
+  border-color: black;
+  height: 30px;
+  /* border-style:solid; */
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  /* border: 2px; */
+}
+.nav-link {
+  border-width: 1px;
+  border-color: black;
+  height: 30px;
+  /* border:solid; */
+  border-radius: 15px;
+  padding: 5px;
+  border-style: solid;
+}
+

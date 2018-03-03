@@ -1,23 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-  <!--<app-page-tailer></app-page-tailer>-->
-<div ngClass="header-bar">
+<div class='header-bar'>
   <h1>{{title}}</h1>
+  <nav class='nav'>
+    <a class='nav-link' routerLink="/kanban">Complete Kanban</a>
+    <a class='nav-link' routerLink="/usEditor">New User Story</a>
+    <a class='nav-link' routerLink="/usEditor">Kanban Statesitic</a>
+  </nav>
 </div>
-<app-kanban>
-
-</app-kanban>
-<!--
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
--->
+<router-outlet></router-outlet>
 
