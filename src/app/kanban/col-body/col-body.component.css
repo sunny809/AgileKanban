@@ -1,0 +1,8 @@
+.col-body{
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}

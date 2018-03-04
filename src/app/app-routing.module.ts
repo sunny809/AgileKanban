@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { KanbanComponent } from './kanban/kanban.component';
-import { UserStoryEditorComponent } from './user-story-editor/user-story-editor.component';
+// import { KanbanComponent } from './kanban/kanban.component';
+// import { UserStoryEditorComponent } from './user-story-editor/user-story-editor.component';
 
 const routes: Routes = [
-  { path: 'kanban', component: KanbanComponent },
-  { path: 'usEditor', component: UserStoryEditorComponent }
+// { path: 'kanban', loadChildren: './kanban/kanban.module#KanbanModule' }
+  { path: 'kanban', component: KanbanComponent }
+  // { path: 'usEditor', component: UserStoryEditorComponent }
 ];
 
 @NgModule({

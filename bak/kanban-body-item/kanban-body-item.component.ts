@@ -1,13 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {UserStory} from '../UserStory';
-import {KanbanService} from '../kanban.service';
+// import {UserStory} from '../UserStory';
+// import {KanbanService} from '../kanban.service';
 
 @Component({
   selector: 'app-kanban-body-item',
   templateUrl: './kanban-body-item.component.html',
   styleUrls: ['./kanban-body-item.component.css']
 })
-export class KanbanBodyItemComponent implements OnInit {
+// export
+class KanbanBodyItemComponent implements OnInit {
 
   @Input() userStory: UserStory;
   constructor(private kanbanService: KanbanService) {

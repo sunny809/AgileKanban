@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KanbanComponent implements OnInit {
 
+  stateList = ['Backlog', 'In Process', 'Done'];
   constructor() { }
 
   ngOnInit() {
