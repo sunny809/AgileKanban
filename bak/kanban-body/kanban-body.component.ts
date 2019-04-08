@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {USER_STORYS} from '../common/mock-UserStory';
-import {KanbanService} from '../common/services';
+import {TASKS} from '../common/mock-UserStory';
+import {TaskService} from '../common/services';
 
 @Component({
   selector: 'app-kanban-body',
@@ -9,21 +9,21 @@ import {KanbanService} from '../common/services';
 })
 export class KanbanBodyComponent implements OnInit {
 
-  userStory = USER_STORYS;
+  userStory = TASKS;
   backLogList = [];
   inProgressList = [];
   doneList = [];
 
-  constructor(private kanbanService: KanbanService) {
+  constructor(private taskService: TaskService) {
     console.log('constructor');
   }
 
   ngOnInit() {
     console.log('ngOnInit');
 
-    this.backLogList = this.kanbanService.getBackLogList();
-    this.inProgressList = this.kanbanService.getInProgressList();
-    this.doneList = this.kanbanService.getDoneList();
+    this.backLogList = this.taskService.getBackLogList();
+    this.inProgressList = this.taskService.getInProgressList();
+    this.doneList = this.taskService.getDoneList();
     // const bList = [];
     // const pList = [];
     // const dList = [];

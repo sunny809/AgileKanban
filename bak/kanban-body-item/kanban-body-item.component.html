@@ -1,29 +1,29 @@
 <div class="kbItem">
-  <!--<div><b>{{name}}</b></div>
-  <div>{{description}}</div>-->
-<!--TODO click and could be edit UserStorys detail-->
-  <!--TODO : could be drat and drop to different status-->
-  <div class="kbUserStory"><b>{{userStory.name}}</b></div>
-  <div class="kbUserStory"><b>Description:</b>
-    <label>
-      <input [(ngModel)]="userStory.description" placeholder="description">
-    </label>
-    <!--<input [(ngModel)]="userStory" placeholder="name">-->
-    <!--{{userStory.description}}-->
-  </div>
-  <div class="kbUserStory"><b>Story Point:</b>
-    <input [(ngModel)]="userStory.storyPoint" placeholder="description">
-  </div>
-  <div class="kbUserStory"><b>Priority:</b>
-    <input [(ngModel)]="userStory.priority" placeholder="description">
-  </div>
-  <div class="kbUserStory"><b>Importance:</b>
-    <input [(ngModel)]="userStory.importance" placeholder="description">
-  </div>
-  <div class="btn-box">
-    <!--<div class="second-btn">Delete</div>-->
-    <div class="primary-btn" (click)="showDetail(userStory.id)">Detail</div>
-    <div class="second-btn" (click)="delDetail(userStory.id)">Del</div>
-  </div>
+    <!--<div><b>{{name}}</b></div>
+    <div>{{description}}</div>-->
+    <!--TODO click and could be edit UserStorys detail-->
+    <!--TODO : could be drat and drop to different status-->
+    <div class="kbUserStory"><b>{{task.name}}</b></div>
+    <div class="kbUserStory"><b>Description:</b>
+        <label>
+            <input [(ngModel)]="task.description" placeholder="description">
+        </label>
+        <!--<input [(ngModel)]="task" placeholder="name">-->
+        <!--{{task.description}}-->
+    </div>
+    <div class="kbUserStory"><b>Story Point:</b>
+        <input [(ngModel)]="task.storyPoint" placeholder="description">
+    </div>
+    <div class="kbUserStory"><b>Priority:</b>
+        <input [(ngModel)]="task.priority" placeholder="description">
+    </div>
+    <div class="kbUserStory"><b>Importance:</b>
+        <input [(ngModel)]="task.importance" placeholder="description">
+    </div>
+    <div class="btn-box">
+        <!--<div class="second-btn">Delete</div>-->
+        <div class="primary-btn" (click)="showTask(task.id)">Detail</div>
+        <div class="second-btn" (click)="deleteTask(task.id)">Del</div>
+    </div>
 
 </div>
