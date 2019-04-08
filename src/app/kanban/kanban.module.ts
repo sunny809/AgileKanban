@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import { KanbanComponent } from './kanban.component';
 import { ColComponent } from './col/col.component';
 import { ColHeaderComponent } from './col-header/col-header.component';
@@ -9,7 +11,9 @@ import { UserstoryItemComponent } from './userstory-item/userstory-item.componen
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [KanbanComponent,
     ColComponent,

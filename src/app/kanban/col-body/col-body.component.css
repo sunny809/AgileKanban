@@ -1,8 +1,23 @@
 .col-body{
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
+    float: left;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.col-body div{
+    float: left;
+}
+
+.kbItem{
+
+    float: left;
+
+}
+
+.width100pr{
+    width: 100%;
 }

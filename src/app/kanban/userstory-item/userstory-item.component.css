@@ -1,68 +1,89 @@
 .kbItem {
-  border-style: solid;
-  border-color: white;
-  border-width: 1px;
-  background-color: #b3d4fc;
-  margin: 10px;
-  border: 10px;
-  width: 30%;
-  float: left;
-  border-radius: 5px
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    background-color: #b3d4fc;
+    margin: 10px;
+    border: 10px;
+    float: left;
+    border-radius: 5px
 }
 .kbUserStory {
-  background-color: white;
-  margin: 3px;
-  padding: 5px;
-  border-radius: 5px
+    float: left;
+    background-color: white;
+    margin: 3px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 97%;
 }
+.kbUserStory label{
+    float: left;
+    width: 100%;
+}
+
+.kbUserStory span {
+    float: left;
+    width: 40%;
+}
+.kbUserStory input{
+    float: left;
+    width: 40%;
+}
+
 .kbDescription {
-  background-color: white;
-  margin: 3px;
-  padding: 5px;
+    background-color: white;
+    margin: 3px;
+    padding: 5px;
 }
 
 .kbPriority {
-  background-color: white;
-  margin: 3px;
-  padding: 5px;
+    background-color: white;
+    margin: 3px;
+    padding: 5px;
 }
 .kbImportance {
-  background-color: white;
-  margin: 3px;
-  padding: 5px;
+    background-color: white;
+    margin: 3px;
+    padding: 5px;
 }
 .kbStoryPoint {
-  background-color: white;
-  margin: 3px;
-  padding: 5px;
+    background-color: white;
+    margin: 3px;
+    padding: 5px;
 }
 .primary-btn {
-  width: 70px;
-  margin: 10px;
-  padding:10px;
-  border-radius:12px;
-  border-width: 3px;
-  border-color: white;
-  border-style: solid;
-  color: white;
-  background-color: darkred;
-  text-align: center;
+    width: 70px;
+    margin: 10px;
+    padding:10px;
+    border-radius:12px;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    background-color: darkred;
+    text-align: center;
 }
 
 .second-btn {
-  width: 70px;
-  margin: 10px;
-  padding:10px;
-  border-radius:12px;
-  border-width: 3px;
-  border-color: white;
-  border-style: solid;
-  color: white;
-  background-color: darkgreen;
-  text-align: center;
+    width: 70px;
+    margin: 10px;
+    padding:10px;
+    border-radius:12px;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    background-color: darkgreen;
+    text-align: center;
 }
 
 .btn-box {
-  width: 100%;
-  float: right;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-box  div{
+    width: 40%;
+    float: right;
 }
