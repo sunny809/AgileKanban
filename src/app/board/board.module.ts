@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-import { KanbanComponent } from './kanban.component';
-import { ColComponent } from './col/col.component';
-import { ColHeaderComponent } from './col-header/col-header.component';
-import { ColBodyComponent } from './col-body/col-body.component';
-import {KanbanService} from '../kanban.service';
+import { KanbanComponent } from './board.component';
+import { ColComponent } from './column/col.component';
+import { ColHeaderComponent } from './column/col-header/col-header.component';
+import { ColBodyComponent } from './column/col-body/col-body.component';
+import {KanbanService} from '../common/services';
 import { UserstoryItemComponent } from './userstory-item/userstory-item.component';
 
 @NgModule({

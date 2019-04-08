@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 // import {UserStory} from '../UserStory';
-// import {KanbanService} from '../kanban.service';
+// import {KanbanService} from '../common/services';
 
 @Component({
   selector: 'app-kanban-body-item',

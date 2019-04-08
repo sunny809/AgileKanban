@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UserStory } from '../../UserStory';
-import { KanbanService } from '../../kanban.service';
+import { UserStory } from '../../common/domain';
+import { KanbanService } from '../../common/services';
 
 @Component({
   selector: 'app-userstory-item',

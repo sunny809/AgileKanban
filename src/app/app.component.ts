@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { KanbanModule } from './kanban/kanban.module';
+import { KanbanModule } from './board/board.module';
 import { Router, NavigationEnd } from '@angular/router';
-import { AppRoutingModule } from './app-routing.module';
-import {KanbanComponent} from './kanban/kanban.component';
+import { AppRoutingModule } from './common/routing';
+import {KanbanComponent} from './board/board.component';
 
 
 @Component({

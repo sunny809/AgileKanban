@@ -1,0 +1,12 @@
+.kanban-container{
+  float: left;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  padding: 10px;
+  margin: 0px 20px 20px 20px;
+  width: 95%;
+  /* border-right: 1px solid black; */
+  /* border-left: 1px solid #eaeaec; */
+		/* border-bottom: 1px solid #eaeaec; */
+}
