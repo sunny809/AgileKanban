@@ -1,31 +1,29 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Task } from '../../common/domain';
-import { TaskService } from '../../common/services';
+import {Component, OnInit, Input} from '@angular/core';
+import {Task} from '../../common/domain';
+import {TaskService} from '../../common/services';
 
 @Component({
-  selector: 'app-userstory-item',
-  templateUrl: './userstory-item.component.html',
-  styleUrls: ['./userstory-item.component.css']
+    selector: 'app-userstory-item',
+    templateUrl: './userstory-item.component.html',
+    styleUrls: ['./userstory-item.component.css']
 })
 export class UserstoryItemComponent implements OnInit {
 
-  @Input() current: Task;
+    @Input() current: Task;
 
-  constructor(private taskService: TaskService) { }
-
-
-  showTask(taskId: number) {
-    console.log('showing detail', taskId);
-  }
+    constructor(private taskService: TaskService) {}
 
 
-  deleteTask(taskId: number) {
-    console.log('del detail', taskId);
-    this.taskService.deleteTask(taskId);
-    // console.log();
-  }
+    showTask(taskId: number) {
+        console.log('showing detail', taskId);
+    }
 
-  ngOnInit() {
-  }
+
+    deleteTask(taskId: number) {
+        console.log('del detail', taskId);
+        this.taskService.deleteTask(taskId);
+    }
+
+    ngOnInit() {}
 
 }

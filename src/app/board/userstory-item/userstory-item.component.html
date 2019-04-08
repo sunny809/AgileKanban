@@ -1,7 +1,4 @@
 <div class="item" title="{{current.description}}">
-    <!--<div>
-<b>{{name}}</b>
-</div>
     <div>{{description}}</div>-->
     <!--TODO click and could be edit UserStorys detail-->
     <!--TODO : could be drat and drop to different status-->
@@ -15,8 +12,6 @@
         <label>
             <input [(ngModel)]="current.description" placeholder="description">
         </label>
-        <!--<input [(ngModel)]="userStory" placeholder="name">-->
-        <!--{{userStory.description}}-->
     </div>
     <div class="item-row">
         <span>
@@ -37,7 +32,6 @@
         <input [(ngModel)]="current.importance" placeholder="description">
     </div>
     <div class="button-row">
-        <!--<div class="second-btn">Delete</div>-->
         <div class="button details-btn" (click)="deleteTask(current.id)">Del</div>
         <div class="button delete-btn" (click)="showTask(current.id)">Detail</div>
     </div>
