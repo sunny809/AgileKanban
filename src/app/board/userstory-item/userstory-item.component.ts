@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UserStory } from '../../common/domain';
-import { KanbanService } from '../../common/services';
+import { Task } from '../../common/domain';
+import { TaskService } from '../../common/services';
 
 @Component({
   selector: 'app-userstory-item',
@@ -9,19 +9,19 @@ import { KanbanService } from '../../common/services';
 })
 export class UserstoryItemComponent implements OnInit {
 
-  @Input() current: UserStory;
+  @Input() current: Task;
 
-  constructor(private kanbanService: KanbanService) { }
+  constructor(private taskService: TaskService) { }
 
 
-  showDetail(userStoryIndex: number) {
-    console.log('showing detail', userStoryIndex);
+  showTask(taskId: number) {
+    console.log('showing detail', taskId);
   }
 
 
-  delDetail(userStoryIndex: number) {
-    console.log('del detail', userStoryIndex);
-    this.kanbanService.deleteUserStory(userStoryIndex);
+  deleteTask(taskId: number) {
+    console.log('del detail', taskId);
+    this.taskService.deleteTask(taskId);
     // console.log();
   }
 

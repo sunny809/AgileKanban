@@ -1,67 +1,83 @@
-import {Injectable} from '@angular/core';
-import {USER_STORYS} from './mock-UserStory';
+import { Injectable } from '@angular/core';
+import { Subject, BehaviorSubject } from "rxjs";
+
+import { TASKS } from './repository';
+import { STATES } from './repository';
 // import {Observable} from 'rxjs/Observable';
-import {UserStory} from './domain';
+import { State } from './domain';
+import { Task } from './domain';
 // import {current} from "codelyzer/util/syntaxKind";
 
 @Injectable()
-export class KanbanService {
+export class TaskService {
 
-  public userStory: UserStory[] = [];
-  backLogCount: number;
-  inProgressCount: number;
-  doneCount: number;
+    private taskArray: Task[] = [];
+    private stateArray: State[] = [];
+    private message: Subject<boolean> = new BehaviorSubject(false);
+    message$ = this.message.asObservable();
 
   constructor() {
-    this.userStory = USER_STORYS;
-    this.backLogCount = 0;
-    this.inProgressCount = 0;
-    this.doneCount = 0;
+    this.taskArray = TASKS;
+    this.stateArray = STATES;
     console.log('constructor done');
   }
 
-  getUserStory(): UserStory[] {
-    return this.userStory;
+  sendMessage () {
+    this.message.next(true);
   }
 
-  deleteUserStory(id: number): void {
-    // this.userStory.forEach(currentUserStory,index){
-    //   if (currentUserSotry.id === id) {
-    //     this.userStory.filter(item => item.id === id );
-    //   }
-    // }
-    console.log('current length:' + this.userStory.length);
-    // this.userStory.forEach(currentUserStory,index){
-    //   if (currentUserSotry.id === id) {
-    const newlist = this.userStory.filter(item => item.id === id);
-    // }
-    // }
-    console.log('after del length:' + this.userStory.length);
-    console.log(newlist);
-    this.refreshStat();
+  messageHandler(){
+      return this.message;
   }
+
+  gettaskArray(): Task[] {
+    return this.taskArray;
+  }
+
+    getTaskList( state : State ): Task[] {
+        if(state !== undefined){
+            const result = this.taskArray.filter(task => task.state === state.id);
+            return result;
+        }
+    }
+
+  getStatesList(): State[] {
+    return this.stateArray;
+  }
+
+    deleteTask(id: number): void {
+        // this.taskArray.forEach(currenttaskArray,index){
+        //   if (currentUserSotry.id === id) {
+        //     this.taskArray.filter(item => item.id === id );
+        //   }
+        // }
+        console.log('current length:' + this.taskArray.length);
+        console.log(this.taskArray);
+        // this.taskArray.forEach(currenttaskArray,index){
+        //   if (currentUserSotry.id === id) {
+        const newlist = this.taskArray.filter(item => item.id !== id);
+        this.taskArray = newlist;
+        console.log('after del length:' + this.taskArray.length);
+        console.log(this.taskArray);
+        this.sendMessage()
+    }
 
   refreshStat() {
     console.log('into the refresh state');
-    console.log('inside' + this.backLogCount);
 
-    for (let i = 0; i < this.userStory.length; i++ ) {
-      const currentItem = this.userStory[i];
+    for (let i = 0; i < this.taskArray.length; i++ ) {
+      const currentItem = this.taskArray[i];
       const progress = currentItem.progress;
       // console.log('progress flag:' + progress);
-      // console.log('backLogCount' + this.backLogCount);
       switch (progress) {
         case 1:
-          this.backLogCount--;
           // alert('1');
           break;
         case 2:
-          this.inProgressCount--;
           // console.log('case 2');
           // alert('2');
           break;
         case 3:
-          this.doneCount--;
           // alert('3');
           break;
         default: alert('default');
@@ -69,39 +85,18 @@ export class KanbanService {
           break;
       }
     }
-    // this.userStory.forEach(function (currentItem, index, userStory) {
-    //   const progress = currentItem.progress;
-    //   console.log('progress flag:' + progress);
-    //   console.log('backLogCount' + this.backLogCount);
-    //   switch (progress) {
-    //     case 1: this.backLogCount++;
-    //       alert('1');
-    //       break;
-    //     case 2: this.inProgressCount++;
-    //       // console.log('case 2');
-    //       alert('2');
-    //       break;
-    //     case 3: this.doneCount++;
-    //       alert('3');
-    //       break;
-    //     default: alert('default');
-    //       // console.log('case default');
-    //       break;
-    //   }
-    console.log('backlog:' + this.backLogCount + '\nprogress:' + this.inProgressCount + '\ndone:' + this.doneCount);
-    // });
   }
 
-  getBackLogList(): UserStory[] {
-    return this.userStory.filter(item => item.progress === 1);
+  getBackLogList(): Task[] {
+    return this.taskArray.filter(item => item.progress === 1);
   }
 
-  getInProgressList(): UserStory[] {
-    return this.userStory.filter(item => item.progress === 2);
+  getInProgressList(): Task[] {
+    return this.taskArray.filter(item => item.progress === 2);
   }
 
-  getDoneList(): UserStory[] {
-    return this.userStory.filter(item => item.progress === 3);
+  getDoneList(): Task[] {
+    return this.taskArray.filter(item => item.progress === 3);
   }
 
 }

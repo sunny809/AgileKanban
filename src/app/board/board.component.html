@@ -1,5 +1,5 @@
-<div class="kanban-container">
-  <div *ngFor="let item of stateList">
-    <app-col [state]="item"></app-col>
-  </div>
+<div class="container">
+    <div class="column" *ngFor="let state of statesList">
+         <app-col [state]="state"></app-col>
+    </div>
 </div>

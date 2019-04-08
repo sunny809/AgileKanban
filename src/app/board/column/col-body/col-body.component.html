@@ -1,5 +1,6 @@
-<div class='col-body'>
-    <div *ngFor="let item of backlogList" class="width100pr">
+
+<div *ngFor="let item of taskList" class="width100pr">
+    <div class='item'>
         <app-userstory-item [current]="item"></app-userstory-item>
     </div>
 </div>

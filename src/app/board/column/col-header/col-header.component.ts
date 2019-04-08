@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { State } from '../../../common/domain';
 // import { Input } from '@angular/'
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ColHeaderComponent implements OnInit {
 
-  @Input() state: string;
+  @Input() state: State;
   constructor() {
     // console.log('col header init');
     // if (this.status === '') {

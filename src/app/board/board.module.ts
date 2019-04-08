@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { KanbanComponent } from './board.component';
-import { ColComponent } from './column/col.component';
+import { Column } from './column/column.component';
 import { ColHeaderComponent } from './column/col-header/col-header.component';
 import { ColBodyComponent } from './column/col-body/col-body.component';
-import {KanbanService} from '../common/services';
+import { TaskService } from '../common/services';
 import { UserstoryItemComponent } from './userstory-item/userstory-item.component';
 
 @NgModule({
@@ -16,12 +16,12 @@ import { UserstoryItemComponent } from './userstory-item/userstory-item.componen
     ReactiveFormsModule
   ],
   declarations: [KanbanComponent,
-    ColComponent,
+    Column,
     ColHeaderComponent,
     ColBodyComponent,
     UserstoryItemComponent
 ], providers: [
-  KanbanService
+  TaskService
 ]
 })
 export class KanbanModule { }

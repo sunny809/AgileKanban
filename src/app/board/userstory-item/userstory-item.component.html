@@ -1,4 +1,4 @@
-<div class="item">
+<div class="item" title="{{current.description}}">
     <!--<div>
 <b>{{name}}</b>
 </div>
@@ -38,8 +38,8 @@
     </div>
     <div class="button-row">
         <!--<div class="second-btn">Delete</div>-->
-        <div class="button delete-btn" (click)="showDetail(current.id)">Detail</div>
-        <div class="button details-btn" (click)="delDetail(current.id)">Del</div>
+        <div class="button details-btn" (click)="deleteTask(current.id)">Del</div>
+        <div class="button delete-btn" (click)="showTask(current.id)">Detail</div>
     </div>
 
 </div>

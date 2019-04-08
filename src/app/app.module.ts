@@ -9,7 +9,7 @@ import {AppComponent} from './app.component';
 // import {KanbanBodyItemComponent} from './board-body-item/board-body-item.component';
 // import {UserStoryComponent} from './user-story/user-story.component';
 import {FormsModule} from '@angular/forms';
-import {KanbanService} from './common/services';
+import {TaskService} from './common/services';
 import { AppRoutingModule } from './common/routing';
 // import { UserStoryEditorComponent } from './user-story-editor/user-story-editor.component';
 // import { UserModule } from './user/user.module';
@@ -42,7 +42,7 @@ import { KanbanModule } from './board/board.module';
     KanbanModule
   ],
   providers: [
-    KanbanService
+    TaskService
   ],
   bootstrap: [AppComponent]
 })
