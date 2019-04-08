@@ -1,14 +1,14 @@
-<div class="kbItem">
+<div class="item">
     <!--<div>
 <b>{{name}}</b>
 </div>
     <div>{{description}}</div>-->
     <!--TODO click and could be edit UserStorys detail-->
     <!--TODO : could be drat and drop to different status-->
-    <div class="kbUserStory">
+    <div class="item-row">
         <b>{{current.name}}</b>
     </div>
-    <div class="kbUserStory">
+    <div class="item-row">
         <label>
             <b>Description:</b>
         </label>
@@ -18,28 +18,28 @@
         <!--<input [(ngModel)]="userStory" placeholder="name">-->
         <!--{{userStory.description}}-->
     </div>
-    <div class="kbUserStory">
+    <div class="item-row">
         <span>
             <b>Story Point:</b>
         </span>
         <input [(ngModel)]="current.storyPoint" placeholder="description">
     </div>
-    <div class="kbUserStory">
+    <div class="item-row">
         <span>
             <b>Priority:</b>
         </span>
         <input [(ngModel)]="current.priority" placeholder="description">
     </div>
-    <div class="kbUserStory">
+    <div class="item-row">
         <span>
             <b>Importance:</b>
         </span>
         <input [(ngModel)]="current.importance" placeholder="description">
     </div>
-    <div class="btn-box">
+    <div class="button-row">
         <!--<div class="second-btn">Delete</div>-->
-        <div class="primary-btn" (click)="showDetail(current.id)">Detail</div>
-        <div class="second-btn" (click)="delDetail(current.id)">Del</div>
+        <div class="button delete-btn" (click)="showDetail(current.id)">Detail</div>
+        <div class="button details-btn" (click)="delDetail(current.id)">Del</div>
     </div>
 
 </div>
