@@ -1,4 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
+import $ from "jquery";
+import "jquery-ui";
 import {Task} from '../../common/domain';
 import {TaskService} from '../../common/services';
 
