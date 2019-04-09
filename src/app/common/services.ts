@@ -7,25 +7,34 @@ import {State} from './domain';
 import {Task} from './domain';
 
 @Injectable()
-export class TaskService {
+export class MessageService {
 
-    private taskArray: Task[] = [];
-    private stateArray: State[] = [];
     private message: Subject<boolean> = new BehaviorSubject(false);
     message$ = this.message.asObservable();
 
     constructor() {
-        this.taskArray = TASKS;
-        this.stateArray = STATES;
         console.log('constructor done');
     }
 
-    sendMessage() {
-        this.message.next(true);
+    sendMessage(message) {
+        this.message.next(message);
     }
 
     messageHandler() {
         return this.message;
+    }
+}
+
+@Injectable()
+export class TaskService {
+
+    private taskArray: Task[] = [];
+    private stateArray: State[] = [];
+
+    constructor(private messageService: MessageService) {
+        this.taskArray = TASKS;
+        this.stateArray = STATES;
+        console.log('constructor done');
     }
 
     gettaskArray(): Task[] {
@@ -43,13 +52,15 @@ export class TaskService {
         return this.stateArray;
     }
 
-    deleteTask(id: number): void {
+    deleteTask(task: Task): void {
+
+
         console.log('current length:' + this.taskArray.length);
         console.log(this.taskArray);
-        const newlist = this.taskArray.filter(item => item.id !== id);
+        const newlist = this.taskArray.filter(item => item.id !== task.id);
         this.taskArray = newlist;
         console.log('after del length:' + this.taskArray.length);
         console.log(this.taskArray);
-        this.sendMessage()
+        this.messageService.sendMessage({message: "resfreshColumn", data: task.state})
     }
 }

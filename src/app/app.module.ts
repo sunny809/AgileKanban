@@ -7,6 +7,7 @@ import {FormsModule} from '@angular/forms';
 import {TaskService} from './common/services';
 import {AppRoutingModule} from './common/routing';
 import {KanbanModule} from './board/board.module';
+import {UiModule} from './ui/ui.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {KanbanModule} from './board/board.module';
         BrowserModule,
         FormsModule,
         AppRoutingModule,
-        KanbanModule
+        KanbanModule,
+        UiModule
     ],
     providers: [
         TaskService

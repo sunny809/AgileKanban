@@ -1,7 +1,9 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Task} from '../../common/domain';
 import {State} from '../../common/domain';
+
 import {TaskService} from '../../common/services';
+import {MessageService} from '../../common/services';
 
 @Component({
     selector: 'app-col',
@@ -12,9 +14,14 @@ export class Column implements OnInit {
     public tasksList: Task[];
     @Input() state: State;
 
-    constructor(private taskService: TaskService) {
-        taskService.messageHandler().subscribe(value => {
-            this.ngOnInit();
+    constructor(private taskService: TaskService, private messageService: MessageService) {
+        this.messageService.messageHandler().subscribe(message => {
+            if (message["message"] === "resfreshColumn") {
+                var stateId = message["data"];
+                if (stateId === this.state.id) {
+                    this.ngOnInit();
+                }
+            }
         });
     }
 

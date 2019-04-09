@@ -1,27 +1,34 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NgbDate, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {KanbanComponent} from './board.component';
 import {Column} from './column/column.component';
 import {ColHeaderComponent} from './column/header/header.component';
 import {ColumnBody} from './column/body/body.component';
+import {DetailsDialog} from './task/details/details.component';
+import {DetailsComponent} from './task/task.component';
+
 import {TaskService} from '../common/services';
-import {UserstoryItemComponent} from './userstory-item/userstory-item.component';
+import {MessageService} from '../common/services';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgbModule
     ],
     declarations: [KanbanComponent,
         Column,
         ColHeaderComponent,
         ColumnBody,
-        UserstoryItemComponent
+        DetailsComponent,
+        DetailsDialog
     ], providers: [
-        TaskService
+        TaskService,
+        MessageService
     ]
 })
 export class KanbanModule {}
