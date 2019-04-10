@@ -1,10 +1,19 @@
 <!-- Hello World -->
-<div class='header-bar'>
-  <h1>{{title}}</h1>
-  <nav class='nav'>
-    <a class='nav-link' routerLink="/kanban">Complete Kanban</a>
-    <!-- <a class='nav-link' routerLink="/usEditor">New User Story</a> -->
-    <!-- <a class='nav-link' routerLink="/usEditor">Kanban Statesitic</a> -->
-  </nav>
-</div>
-<router-outlet></router-outlet>
+<app-layout>
+    <div class="jumbotron">
+        <h1>Angular CLI v7 + Bootstrap & FontAwesome</h1>
+        <p>
+            In this tutorial you learn how to use Angular CLI v6 with Bootstrap and FontAwesome!
+        </p>
+    </div>
+
+    <div class='header-bar'>
+        <h1>{{title}}</h1>
+        <nav class='nav'>
+            <a class='nav-link' routerLink="/kanban">Complete Kanban</a>
+            <a class='nav-link' routerLink="/usEditor">New User Story</a>
+            <a class='nav-link' routerLink="/usEditor">Kanban Statesitic</a>
+        </nav>
+    </div>
+    <router-outlet></router-outlet>
+</app-layout>

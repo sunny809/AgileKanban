@@ -1,0 +1,40 @@
+<div class="item" title="{{current.description}}">
+    <div>{{description}}</div>
+    <!--TODO click and could be edit Tasks detail-->
+    <!--TODO : could be drat and drop to different status-->
+    <div class="item-row">
+        <b>{{current.name}}</b>
+    </div>
+    <div class="item-row">
+        <label>
+            <b>Description:</b>
+        </label>
+        <label>
+            <input [(ngModel)]="current.description" placeholder="description">
+        </label>
+    </div>
+    <div class="item-row">
+        <span>
+            <b>Story Point:</b>
+        </span>
+        <input [(ngModel)]="current.storyPoint" placeholder="description">
+    </div>
+    <div class="item-row">
+        <span>
+            <b>Priority:</b>
+        </span>
+        <input [(ngModel)]="current.priority" placeholder="description">
+    </div>
+    <div class="item-row">
+        <span>
+            <b>Importance:</b>
+        </span>
+        <input [(ngModel)]="current.importance" placeholder="description">
+    </div>
+    <div class="button-row">
+        <div class="button details-btn" (click)="deleteTask(current)">Del</div>
+        <!--<div class="button delete-btn" (click)="showTask(current.id)">Detail</div>-->
+        <div class="button delete-btn" (click)="showTask(current)">Detail</div>
+    </div>
+
+</div>
